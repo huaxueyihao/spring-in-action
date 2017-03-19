@@ -1,0 +1,20 @@
+package com.springinaction.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.springinaction.springidol.Performer;
+
+public class Test {
+	
+	
+	@org.junit.Test
+	public void testPerformer() throws Exception {
+		
+		ApplicationContext ac = new ClassPathXmlApplicationContext("spring/springbean.xml");
+		Performer duke = (Performer) ac.getBean("duke");
+		duke.perform();
+		
+	}
+	
+}

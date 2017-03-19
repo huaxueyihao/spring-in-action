@@ -1,0 +1,23 @@
+package com.springinaction.springidol;
+
+/**
+ * 
+* @ClassName: Instrumentalist 
+* @Description: 一个有天赋的音乐家
+* @author mao
+* @date 2017年3月19日 下午7:15:17 
+*
+ */
+public class Instrumentalist implements Performer {
+	
+	public Instrumentalist(){
+		
+	}
+	
+	
+	public void perform() throws Exception {
+		
+
+	}
+
+}

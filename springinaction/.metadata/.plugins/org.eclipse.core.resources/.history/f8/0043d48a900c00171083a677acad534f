@@ -1,0 +1,57 @@
+package com.springinaction.test;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.springinaction.springidol.Performer;
+import com.springinaction.springidol.Stage;
+import com.springinaction.springidol.Ticket;
+
+
+public class TestCase {
+	
+	//这个ClassPathXmlApplicationContext是springframe-context中
+	//org.springframework.context.support包下的类
+	ApplicationContext ac = new ClassPathXmlApplicationContext("spring/springbean.xml");//注意路径
+	
+	//测试Jungger
+	@Test
+	public void testPerformer() throws Exception {
+		
+		Performer duke = (Performer) ac.getBean("duke");
+		duke.perform();
+		
+	}
+	
+	//测试poeticJuggler
+	//测试结果，能抛豆袋子，又能唱歌
+	@Test
+	public void testPJuggler() throws Exception {
+		
+		Performer duke = (Performer) ac.getBean("poeticDuke");
+		duke.perform();
+		
+	}
+	
+	//测试单例bean
+	@Test
+	public void testStage() throws Exception {
+		
+		Stage stage1 = (Stage) ac.getBean("theStage");
+//		Stage stage2 = (Stage) ac.getBean("theStage");
+		System.out.println(stage1.getClass());
+		
+	}
+	
+	//测试单例bean
+	@Test
+	public void testTicket() throws Exception {
+		
+		Ticket ticket1 = (Ticket) ac.getBean("ticket");
+		Ticket ticket2 = (Ticket) ac.getBean("ticket");
+
+		
+	}
+	
+}

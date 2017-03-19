@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestCase.testHank" project="chapter01" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testHank" classname="com.springinaction.test.TestCase" time="0.001"/>
+</testrun>

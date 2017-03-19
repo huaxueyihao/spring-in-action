@@ -1,0 +1,14 @@
+package com.springinaction.springidol;
+
+/**
+ * 
+ *
+ */
+public class Instrumentalist implements Performer {
+
+	public void perform() throws Exception {
+		
+
+	}
+
+}

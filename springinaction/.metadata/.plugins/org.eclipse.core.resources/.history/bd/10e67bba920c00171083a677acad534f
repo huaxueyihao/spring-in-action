@@ -1,0 +1,12 @@
+package com.springinaction.springidol;
+
+public class Auditorium {
+	
+	public void turnOnLights(){
+		System.out.println("¿ªµÆ......");
+	}
+	
+	public void turnOffLights(){
+		System.out.println("¹ØµÆµÆ......");
+	}
+}

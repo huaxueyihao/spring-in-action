@@ -1,0 +1,24 @@
+package com.springinaction.test;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.springinaction.springidol.Performer;
+
+
+public class TestCase {
+	
+	//这个ClassPathXmlApplicationContext是springframe-context中
+	//org.springframework.context.support包下的类
+	ApplicationContext ac = new ClassPathXmlApplicationContext("spring/springbean.xml");
+	
+	@Test
+	public void testPerformer() throws Exception {
+		
+		Performer duke = (Performer) ac.getBean("duke");
+		duke.perform();
+		
+	}
+	
+}

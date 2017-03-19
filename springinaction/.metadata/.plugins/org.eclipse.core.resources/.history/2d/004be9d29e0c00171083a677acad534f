@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    
+    <!-- 名字为duke的bean -->
+    <bean id="duke" class="com.springinaction.springidol.Juggler">
+    	<!-- 通过构造器为beanBags赋值 -->
+    	<constructor-arg value="15"/>
+    </bean>
+    
+    <!-- 声明一个sonnet29的bean -->
+    <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"></bean>
+	
+	<!--声明一个PoeticJuggler的bean,并且通过构造器注入，对应的引用,ref位引用依赖的bean  -->
+	<bean id="poeticDuke" class="com.springinaction.springidol.PoeticJuggler">
+		<constructor-arg value="15"/>
+		<constructor-arg ref="sonnet29"/>
+	</bean>
+	
+	<!-- Stage是个到单例类， 构造函数私有化
+		factory-method='方法名'
+		创建bean的时候，就调用这个方法
+	-->
+	<bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"></bean>
+	
+	<!-- scope='prototype'就变成多例 -->
+	<bean id="ticket" class="com.springinaction.springidol.Ticket" scope="prototype"></bean>
+	
+	<!-- init-method、destory-method -->
+	<bean id="auditorium" 
+			class="com.springinaction.springidol.Auditorium" 
+			init-method="turnOnLights"
+			destroy-method="turnOffLights"></bean>
+	
+	<!-- com.springinaction.springidol.Instrumentalist
+		这个类有一个song的属性，现在赋值为“认真的雪”；
+		注意：这个类一定要有setter方法，
+		没有setter方法抛出NotWritablePropertyException
+	 -->
+	<!-- <bean id="kenny" 
+		class="com.springinaction.springidol.Instrumentalist">
+		<property name="song" value="认真的雪"></property>
+	</bean> -->
+	
+	<!-- 乐器：saxophone -->
+	<bean id="saxophone" class="com.springinaction.springidol.Saxophone"></bean>
+	<!-- ref='saxophone'，直接引用上边的bean -->
+	<!-- <bean id="kenny" 
+		class="com.springinaction.springidol.Instrumentalist">
+		<property name="song" value="认真的雪"></property>
+		<property name="instrument" ref="saxophone"></property>
+	</bean> 
+	 -->
+	 <!-- 注入内部bean，就避免了多个音乐家共用一个saxophone而产生的卫生问题 -->
+	<bean id="kenny" 
+		class="com.springinaction.springidol.Instrumentalist">
+		<property name="song" value="认真的雪"></property>
+		<property name="instrument">
+			<bean class="com.springinaction.springidol.Saxophone"></bean>
+		</property>
+	</bean> 
+	
+	<!-- p装配 -->
+	<bean id="kenny1" 
+		class="com.springinaction.springidol.Instrumentalist"
+		p:song="认真的雨"
+		p:instrument-ref="saxophone"/>
+		
+		
+	<!-- 装配List，Set，Array -->
+	<!-- 乐器：guitar 吉他 -->
+	<bean id="guitar" class="com.springinaction.springidol.Guitar"></bean>
+	<!-- 乐器：cymbal  钹 -->
+	<bean id="cymbal" class="com.springinaction.springidol.Cymbal"></bean>
+	<!-- 乐器：harmonica 口琴 -->
+	<bean id="harmonica" class="com.springinaction.springidol.Harmonica"></bean>
+	<!-- 一个乐队 -->
+	<bean id="hank"
+		class="com.springinaction.springidol.OneManBand">
+		<property name="instruments">
+			<list>
+				<ref bean="guitar"/>
+				<ref bean="cymbal"/>
+				<ref bean="harmonica"/>
+			</list>
+		</property>
+	</bean>
+	
+	
+</beans>

@@ -1,0 +1,16 @@
+package com.springinaction.springidol;
+
+/**
+ * 
+ *
+ */
+public interface Performer {
+	
+	/**
+	 * 表演的方法
+	 * @throws Exception
+	 */
+	void perform() throws Exception;
+	
+	
+}

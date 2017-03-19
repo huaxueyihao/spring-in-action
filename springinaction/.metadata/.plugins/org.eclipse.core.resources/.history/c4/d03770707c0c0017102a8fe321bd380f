@@ -1,0 +1,10 @@
+package com.springinaction.test;
+
+public class Test {
+	
+	@org.junit.Test
+	public void testPerformer() {
+		
+	}
+	
+}

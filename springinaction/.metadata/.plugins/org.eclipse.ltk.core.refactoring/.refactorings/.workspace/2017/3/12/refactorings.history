@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“chapter02”重命名为“chapter03”" description="重命名资源“chapter02”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/chapter02" name="chapter03" stamp="1490060086988" updateReferences="true"/>
+</session>

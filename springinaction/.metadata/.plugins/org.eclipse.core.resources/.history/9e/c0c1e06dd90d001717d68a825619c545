@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    
+    <!-- byName自动装配
+    	 缺点：若是有多个音乐家需要装配instrument属性，则他们就会公用一个Saxopbone（即多个bean的属性被同一个bean赋值）
+     -->
+    <!-- 先在容器中装个乐器对象 -->
+	<bean id="instrument" class="com.springinaction.springidol.Saxophone"></bean>
+	<!-- 现在为音乐家kenny自动装配上面instrument的乐器 -->
+	<bean id="kenny" 
+		class="com.springinaction.springidol.Instrumentalist"
+		autowire="byName">
+		<property name="song" value="演员——薛之谦"></property>	
+	</bean>
+	
+	<bean id="kenny1" 
+		class="com.springinaction.springidol.Instrumentalist"
+		autowire="byName">
+		<property name="song" value="演员2——薛之谦"></property>	
+	</bean>
+	
+</beans>

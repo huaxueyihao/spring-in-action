@@ -1,0 +1,24 @@
+package com.springinaction.springidol;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+
+/**
+ * 
+ * @ClassName: Guitar 
+ * @Description: 乐器：吉他
+ * @author mao
+ * @date 2017年3月19日 下午8:15:44 
+ *
+ */
+@Qualifier("stringed")
+public class Guitar implements Instrument {
+	
+	public Guitar(){
+		
+	}
+	
+	public void play() {
+		System.out.println("guitar guitar guitar");
+	}
+
+}

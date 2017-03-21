@@ -1,0 +1,19 @@
+package com.springinaction.springidol;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class KnifeJuggler {
+	
+	private Set<Knife> knives;
+	
+	public KnifeJuggler(Provider<Knife>  knifeProvider){
+		
+		knives = new HashSet<Knife>();
+		
+		
+		
+	}
+	
+	
+}

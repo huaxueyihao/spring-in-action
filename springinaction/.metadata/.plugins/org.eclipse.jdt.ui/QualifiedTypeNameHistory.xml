@@ -5,4 +5,15 @@
 <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
 <fullyQualifiedTypeName name="com.springinaction.springidol.Performer"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.springinaction.springidol.Stage.StageSingletonHolder"/>
+<fullyQualifiedTypeName name="com.springinaction.springidol.Stage"/>
+<fullyQualifiedTypeName name="com.springinaction.springidol.Ticket"/>
+<fullyQualifiedTypeName name="com.springinaction.springidol.Auditorium"/>
+<fullyQualifiedTypeName name="com.springinaction.springidol.Saxophone"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="com.springinaction.springidol.OneManBand"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="com.springinaction.springidol.Instrumentalist"/>
+<fullyQualifiedTypeName name="com.springinaction.springidol.PoeticJuggler"/>
 </qualifiedTypeNameHistroy>

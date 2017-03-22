@@ -1,6 +1,7 @@
 package com.springinaction.test;
 
 import org.junit.Test;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -68,6 +69,25 @@ public class TestCase {
 		Instrumentalist kenny = (Instrumentalist) ac.getBean("kenny");
 		kenny.perform();
 		kenny.getInstrument().play();
+		
+	}
+	//测试注解@Component
+	@Test
+	public void testComponent() throws Exception {
+		
+		Instrumentalist eddie = (Instrumentalist) ac.getBean("eddie");
+		eddie.perform();
+		eddie.getInstrument().play();
+		
+	}
+	
+	//测试基于java的配置
+	@Test
+	public void testJava() throws Exception {
+		
+		Instrumentalist eddie = (Instrumentalist) ac.getBean("kenny");
+		eddie.perform();
+		eddie.getInstrument().play();
 		
 	}
 }

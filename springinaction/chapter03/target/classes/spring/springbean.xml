@@ -37,14 +37,14 @@
 	<!-- Saxophone类型的bean，下面两个bean同时存在的时候，会抛异常NoUniqueBeanDefinitionException -->
 	<!-- <bean id="saxophone" class="com.springinaction.springidol.Saxophone"></bean>  -->
 	<!--Guitar类型的bean(Instrument 乐器)-->
-	<bean id="guitar" class="com.springinaction.springidol.Guitar">
-		<!-- <qualifier value="stringed"></qualifier> 这一行有没有不影响 -->
+	<!-- <bean id="guitar" class="com.springinaction.springidol.Guitar">
+		<qualifier value="stringed"></qualifier> 这一行有没有不影响
 	</bean> 
 	
 	<bean id="kenny" 
 		class="com.springinaction.springidol.Instrumentalist">
 		<property name="song" value="演员——薛之谦"></property>	
-	</bean>
+	</bean> -->
 	
 	
 	<!-- constructor 自动装配
@@ -55,7 +55,16 @@
 	<bean id="duke" 
 		class="com.springinaction.springidol.PoeticJuggler"
 		autowire="constructor"/> -->
+	<!-- 自动装配，启动 --> 
+    <!-- <context:annotation-config/> -->
+    <!-- 自动识别 -->
+    <!-- <context:component-scan 
+    	base-package="com.springinaction.springidol"></context:component-scan>
+	 -->
+	 <!-- 基于java的配置 -->
+	 <context:component-scan 
+    	base-package="com.springinaction.springidol*"></context:component-scan>
 	
-    <context:annotation-config/>
+	
 	
 </beans>

@@ -1,0 +1,15 @@
+package com.springinaction.springidol;
+
+public class Magician implements MindReader {
+
+	public void interceptThoughts(String thoughts) {
+		// TODO 自动生成的方法存根
+
+	}
+
+	public String getThoughts() {
+		// TODO 自动生成的方法存根
+		return null;
+	}
+
+}

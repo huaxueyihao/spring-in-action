@@ -1,0 +1,10 @@
+package com.springinaction.springidol;
+
+public class CriticismEngineImpl implements CriticismEngine {
+
+	public String getCriticism() {
+		// TODO 自动生成的方法存根
+		return null;
+	}
+
+}

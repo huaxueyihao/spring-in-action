@@ -1,0 +1,27 @@
+package com.springinaction.springidol;
+
+public class Audience {
+	
+	public void takeSeats(){
+		//表演之前
+		System.out.println("观众开始入座！");
+	}
+	
+	public void turnOffCellPhones(){
+		//表演之前
+		System.out.println("观众正在坐着");
+	}
+	
+	public void applaud(){
+		//表演之后
+		System.out.println("CLAP CLAP　CLAP");
+	}
+	
+	public void demandRefund(){
+		//表演失败之后
+		System.out.println("Boo! We want our money back!");
+	}
+	
+	
+	
+}

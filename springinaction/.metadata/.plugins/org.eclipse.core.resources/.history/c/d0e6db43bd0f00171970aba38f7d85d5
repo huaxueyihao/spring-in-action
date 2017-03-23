@@ -1,0 +1,12 @@
+package com.springinaction.springidol;
+
+public aspect JudgeAspect {
+	
+	public JudgeAtspect(){
+		
+	}
+	
+	pointcut performance():execution(* perform(..));
+
+
+}

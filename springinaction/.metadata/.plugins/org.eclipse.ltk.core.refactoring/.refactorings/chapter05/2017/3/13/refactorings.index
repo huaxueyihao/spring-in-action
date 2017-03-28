@@ -1,0 +1,3 @@
+1490716032156	抽取局部变量“connection”
+1490716062229	抽取局部变量“createStatement”
+1490716171633	抽取局部变量“executeQuery”

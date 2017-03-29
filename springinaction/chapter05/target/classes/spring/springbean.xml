@@ -13,9 +13,9 @@
     
     
 	 <!--注解形式的 组件扫描 -->
-	 <context:component-scan 
+	 <!-- <context:component-scan 
     	base-package="com.springinaction.springidol"></context:component-scan>
-	 
+	  -->
 	 
 	 <!--基于dbcp 配置数据源 -->
 	 <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
@@ -37,6 +37,14 @@
 	 	<property name="maxActive" value="10"></property> -->
 	 </bean>
 	
+	<!-- 使用SimpleJdbcTemplate -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+		<constructor-arg ref="dataSource"/>
+	</bean>
 	
+	<!-- dao层 -->
+	<bean id="jdbcUserDao" class="com.springinaction.dao.impl.JdbcUserDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
 	
 </beans>

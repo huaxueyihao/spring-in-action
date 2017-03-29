@@ -1,0 +1,13 @@
+package com.springinactionmodel;
+
+public class Spitter {
+	
+	private String userName;
+	private String password;
+	private String fullName;
+	private String email;
+	
+	
+	
+	
+}

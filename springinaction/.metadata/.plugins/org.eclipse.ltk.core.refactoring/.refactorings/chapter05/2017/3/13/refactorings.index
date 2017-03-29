@@ -1,3 +1,11 @@
 1490716032156	抽取局部变量“connection”
 1490716062229	抽取局部变量“createStatement”
 1490716171633	抽取局部变量“executeQuery”
+1490801353917	重命名包“com.springinactionmodel”
+1490801596781	重命名类型“SpitterDao”
+1490801628140	重命名类型“JdbcSpitterDao”
+1490801652333	重命名类型“Spitter”
+1490801744967	重命名字段“password”
+1490801754872	重命名字段“fullName”
+1490801762754	重命名字段“email”
+1490803523891	删除元素

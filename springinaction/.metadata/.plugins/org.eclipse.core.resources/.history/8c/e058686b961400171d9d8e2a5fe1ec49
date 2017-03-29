@@ -1,0 +1,9 @@
+package com.springinaction.dao;
+
+import com.springinaction.model.User;
+
+public interface UserDao {
+	
+	public void addUser(User spitter);
+	
+}

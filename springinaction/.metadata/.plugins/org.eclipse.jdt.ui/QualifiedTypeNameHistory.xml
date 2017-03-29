@@ -52,4 +52,9 @@
 <fullyQualifiedTypeName name="com.springinaction.springidol.CriticismEngineImpl"/>
 <fullyQualifiedTypeName name="org.apache.commons.dbcp.BasicDataSource"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.datasource.DriverManagerDataSource"/>
+<fullyQualifiedTypeName name="com.springinaction.dao.SpitterDao"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.simple.SimpleJdbcTemplate"/>
+<fullyQualifiedTypeName name="com.springinactionmodel.Spitter"/>
+<fullyQualifiedTypeName name="com.springinaction.dao.UserDao"/>
+<fullyQualifiedTypeName name="com.springinaction.model.User"/>
 </qualifiedTypeNameHistroy>

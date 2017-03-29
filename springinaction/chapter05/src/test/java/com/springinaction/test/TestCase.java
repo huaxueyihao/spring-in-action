@@ -1,6 +1,7 @@
 package com.springinaction.test;
 
 import java.sql.Connection;
+
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -12,17 +13,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import com.springinaction.springidol.Auditorium;
-import com.springinaction.springidol.Instrumentalist;
-import com.springinaction.springidol.Magician;
-import com.springinaction.springidol.MindReader;
-import com.springinaction.springidol.OneManBand;
-import com.springinaction.springidol.Performer;
-import com.springinaction.springidol.PoeticJuggler;
-import com.springinaction.springidol.Stage;
-import com.springinaction.springidol.Thinker;
-import com.springinaction.springidol.Ticket;
-import com.springinaction.springidol.Volunteer;
+import com.springinaction.dao.UserDao;
+import com.springinaction.model.User;
+
 
 
 public class TestCase {
@@ -64,6 +57,21 @@ public class TestCase {
 		while(rs.next()){
 			System.out.println(rs.getString("username"));
 		}
+		
+	}
+	
+	//≤‚ ‘SimpleJdbcTemplate
+	//≤‚ ‘spring ˝æ›‘¥≈‰÷√
+	@Test
+	public void testTemplate() throws Exception {
+		
+		UserDao userDao = (UserDao)ac.getBean("jdbcUserDao");
+		
+		User user = new User();
+		user.setId(1);
+		user.setUserName("≤‚ ‘”√ªß");
+		userDao.addUser(user);
+		
 		
 	}
 	

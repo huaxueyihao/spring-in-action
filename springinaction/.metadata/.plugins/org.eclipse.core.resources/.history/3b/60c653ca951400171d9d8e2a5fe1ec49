@@ -1,0 +1,25 @@
+package com.springinaction.dao.impl;
+
+import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+
+import com.springinaction.dao.UserDao;
+import com.springinaction.model.User;
+
+public class JdbcUserDao implements UserDao{
+	
+	//过时了都，4.2.9版本都没有这个类，哎，这书太老了
+	private SimpleJdbcTemplate jdbcTemplate;
+	
+	public void setJdbcTemplate(SimpleJdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	public void addSpitter(User spitter){
+		
+		jdbcTemplate.update(sql, 
+				spitter.getUserName(),
+				spitter.getFullName(),
+				spitter.getPassword(),
+				spitter.getEmail());
+	}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springinaction.dao.IUserDao">
+
+	<insert id="addStu" parameterType="Student">
+		insert into student(stuid,stuname,classid) values(#{stuid},#{stuname},#{classid})
+	</insert>
+	
+	<delete id="deleteStu" parameterType="int">
+		delete from student where stuid=#{stuid}
+	</delete>
+	<update id="updateStu" parameterType="Student">
+		update student set stuname=#{stuname},classid=#{classid} where stuid=#{stuid}
+	</update>
+	<select id="getAll" resultType="Student">
+		select * from student
+	</select>
+	<select id="getOne" parameterType="java.util.Map" resultType="Student">
+		select * from student where stuid=#{stuid}
+	</select>
+	
+</mapper>

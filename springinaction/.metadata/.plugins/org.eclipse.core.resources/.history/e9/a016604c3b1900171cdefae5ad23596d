@@ -1,0 +1,20 @@
+package com.springinaction.dao.impl;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.orm.hibernate3.SessionFactoryUtils;
+
+import com.springinaction.dao.IUserDao;
+import com.springinaction.model.User;
+
+public class UserDaoImpl implements IUserDao{
+	
+	private 
+	
+	public void addUser(User user) {
+		
+		
+		
+	}
+
+}

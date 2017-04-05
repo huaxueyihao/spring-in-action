@@ -1,0 +1,38 @@
+package com.springinaction.dao;
+
+import com.springinaction.model.User;
+
+/**
+ * 
+ * @ClassName: UserDao 
+ * @Description: 用户dao的接口
+ * @author mao
+ * @date 2017年3月29日 下午11:58:50 
+ *
+ */
+public interface IUserDao {
+	
+	/**
+	 * 
+	* @Title: addUser 
+	* @Description:  增加一个用户
+	* @param @param user    
+	* @return void    
+	* @throws
+	 */
+	public void addUser(User user) throws Exception;
+	
+	/**
+	 * 
+	* @Title: deleteOneUser 
+	* @Description:  根据id删除一个用户
+	* @param @param id
+	* @param @throws Exception    
+	* @return void    
+	* @throws
+	 */
+	public void deleteOneUser(int id) throws Exception;
+	
+	public void selectAllUsers() throws Exception;
+	
+}

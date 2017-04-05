@@ -1,0 +1,28 @@
+package com.springinaction.service.impl;
+
+import java.util.List;
+
+import com.springinaction.dao.IUserDao;
+import com.springinaction.model.User;
+import com.springinaction.service.IUserService;
+
+public class UserServiceImpl implements IUserService {
+	
+	private IUserDao userDao;
+
+	public int addUser(User user) throws Exception {
+		
+		return userDao.addUser(user);
+	}
+
+	public int deleteOneUser(int id) throws Exception {
+		// TODO 自动生成的方法存根
+		return userDao.deleteOneUser(id);
+	}
+
+	public List<User> selectAllUsers() throws Exception {
+		// TODO 自动生成的方法存根
+		return null;
+	}
+
+}

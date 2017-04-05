@@ -1,0 +1,16 @@
+package com.springinaction.dao.impl;
+
+import com.springinaction.dao.UserDao;
+import com.springinaction.model.User;
+
+public class UserDaoImpl implements UserDao{
+	
+	private 
+	
+	public void addUser(User user) {
+		
+		
+		
+	}
+
+}

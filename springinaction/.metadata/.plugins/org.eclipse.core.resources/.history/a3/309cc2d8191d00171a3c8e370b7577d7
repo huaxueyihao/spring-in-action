@@ -1,0 +1,5 @@
+package com.springinaction.servic;
+
+public interface SpitterService {
+
+}

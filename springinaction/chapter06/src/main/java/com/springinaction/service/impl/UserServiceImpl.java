@@ -35,7 +35,6 @@ public class UserServiceImpl implements IUserService {
 		
 		userDao.addUser(user);
 		
-		
 		return 0;
 	}
 

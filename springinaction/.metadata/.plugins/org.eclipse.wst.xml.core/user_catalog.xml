@@ -3,4 +3,5 @@
   <uri name="http://www.springframework.org/schema/beans/spring-beans-4.0.xsd" uri="file:///D:/maven/spring-xsd/spring-beans-4.0.xsd"/>
   <uri name="http://www.springframework.org/schema/context" uri="file:///D:/maven/spring-xsd/spring-context-4.0.xsd"/>
   <uri name="http://www.springframework.org/schema/aop" uri="file:///D:/maven/spring-xsd/aop/spring-aop-4.0.xsd"/>
+  <uri name="http://www.springframework.org/schema/mvc" uri="file:///D:/maven/spring-xsd/mvc/spring-mvc-4.0.xsd"/>
 </catalog>

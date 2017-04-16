@@ -1,5 +1,0 @@
-package com.springinaction.dao.impl;
-
-public class UserDaoImpl {
-
-}

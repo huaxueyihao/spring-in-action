@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.springinaction.chapter07</groupId>
+  <artifactId>chapter07</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <dependencies>
+  	<!-- log4j的依赖 -->
+  	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.14</version>
+	</dependency>
+	<!-- junit的依赖 -->
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.11</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<!-- 引入jstl标签库的jar -->
+  	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	<!-- 引入tiles标签库的jar -->
+	<dependency>
+	    <groupId>org.apache.tiles</groupId>
+	    <artifactId>tiles-jsp</artifactId>
+	    <version>2.2.2</version>
+	</dependency>
+  	<!-- spring beans的依赖 -->
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-beans</artifactId>
+  		<version>4.2.9.RELEASE</version>
+  	</dependency>
+  	<!-- spring context（应用上下文的依赖） -->
+  	<!-- <dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>4.2.9.RELEASE</version>
+  	</dependency> -->
+  	<!-- JSR-330的标准注解 -->
+  	<dependency>
+  		<groupId>javax.inject</groupId>
+  		<artifactId>javax.inject</artifactId>
+  		<version>1</version>
+  	</dependency> 
+  	<!-- spring aspects依赖，AOP用到 -->
+  	<!-- <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aspects</artifactId>
+	    <version>4.2.9.RELEASE</version>
+	</dependency> -->
+	<!-- 配置数据源的链接dbcp（ 提供链接池功能）-->
+  	<!-- <dependency>
+	    <groupId>commons-dbcp</groupId>
+	    <artifactId>commons-dbcp</artifactId>
+	    <version>1.3</version>
+	</dependency> -->
+	<!-- mysql的链接的驱动包 -->
+	<!-- <dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.40</version>
+	</dependency> -->
+	<!-- spring-jdbc配置数据源 -->
+	<!-- <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>4.2.9.RELEASE</version>
+	</dependency> -->
+	<!-- <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>3.1.0.RELEASE</version>
+	</dependency> -->
+	<!-- spring orm -->
+	<!-- <dependency>
+	    <groupId>springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>1.1.3</version>
+	</dependency> -->
+	<!-- spring orm -->
+	<!-- <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>4.2.9.RELEASE</version>
+	</dependency> -->
+	<!-- mybatis jar -->
+	<!-- <dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis</artifactId>
+	    <version>3.2.2</version>
+	</dependency> -->
+	<!-- mybatis spring jar -->
+	<!-- <dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis-spring</artifactId>
+	    <version>1.3.0</version>
+	</dependency> -->
+	<!-- spring mvc的jar包 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>4.2.8.RELEASE</version>
+	</dependency>
+	
+	<!-- 编写测试用例用到，初次用 -->
+	<dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-all</artifactId>
+	    <version>1.10.19</version>
+	</dependency>
+
+	
+  </dependencies>
+  
+  
+  
+  <build>
+		<!-- 配置插件 -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<port>8080</port>
+					<path>/</path>
+					<url>localhost:8080/</url>
+					<username>tomcat</username>
+					<password>tomcat</password>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>

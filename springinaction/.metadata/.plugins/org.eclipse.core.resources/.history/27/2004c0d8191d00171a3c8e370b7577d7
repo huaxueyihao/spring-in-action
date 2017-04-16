@@ -1,0 +1,16 @@
+package com.springinaction.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.springinaction.servic.SpitterService;
+
+
+@Controller
+public class HomeController {
+	
+	public static final int DEFAULT_SPITTLES_PER_PAGE = 25;
+	
+	private SpitterService spitterService;
+	
+	
+}

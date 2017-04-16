@@ -1,0 +1,16 @@
+package com.springinaction.service.impl;
+
+import java.util.List;
+
+import com.springinaction.model.User;
+import com.springinaction.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public List<User> selectAllUser() {
+		// TODO 自动生成的方法存根
+		return null;
+	}
+
+}

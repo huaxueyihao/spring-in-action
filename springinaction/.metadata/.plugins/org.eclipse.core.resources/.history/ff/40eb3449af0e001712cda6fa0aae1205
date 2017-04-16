@@ -1,9 +1,0 @@
-package com.springinaction.springidol;
-
-import org.springframework.context.annotation.Configuration;
-
-//在基于java的配置里使用@Configuration注解java类，就等价于XML配置中的<beans>
-@Configuration
-public class SpingIdolConfig {
-	
-}

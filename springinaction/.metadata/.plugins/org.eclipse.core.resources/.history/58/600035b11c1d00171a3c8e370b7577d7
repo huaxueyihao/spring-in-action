@@ -1,0 +1,18 @@
+package com.springinaction.test;
+
+import org.junit.Test;
+import org.mockito.Mockito;
+
+import com.springinaction.model.Spitte;
+import com.springinaction.service.SpitterService;
+
+public class HomeControllerTest {
+	
+	@Test
+	public void shouldDisplayRecentSpittles(){
+//		asList(new Spitte(),new Spitte(),new Spitte());
+		
+		mock(SpitterService.class);
+		
+	}
+}

@@ -1,0 +1,7 @@
+package com.springinaction.service;
+
+public interface UserService {
+
+	
+
+}

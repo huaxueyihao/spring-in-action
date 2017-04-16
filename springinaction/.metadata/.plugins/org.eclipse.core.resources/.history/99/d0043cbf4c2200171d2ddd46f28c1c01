@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    	http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+    
+    <!-- 开启mvc注解驱动 -->
+    <mvc:annotation-driven/>
+    
+	 <!--注解形式的 组件扫描 -->
+	 <context:component-scan 
+    	base-package="com.springinaction.*"></context:component-scan>
+	
+	
+	<!-- 视图解析器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!-- 这个属性之前没见过，是因为home.jsp使用了一些JSTL标签， -->
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+		<property name="prefix" value="/WEB-INF/views"></property>
+		<property name="suffix" value="/WEB-INF/.jsp"></property>
+	</bean>
+	
+	<!-- 解析Tiles视图的解析器，初次使用，这玩意有人用吗？
+		这个bean会建立一个视图解析器，他会查找逻辑视图名称与Tiles定义相同的Tiles模板定义，并将其作为视图，
+		Spring是如何指定Tiles定义的，这就需要TilesConfigurer来记录这个信息，		
+	 -->
+	<bean class="org.springframework.web.servlet.view.tiles2.TilesViewResolver"></bean>
+	
+	<!-- 配置TilesConfigurer,他会加载一个或多个的Tiles定义， -->	
+	<bean class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<!-- /**/views.xml 这是Ant风格的**模式，
+					表示要在 /WEB-INF/views/下的所有目录查找views.xml-->
+				<value>/WEB-INF/views/**/views.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<!-- 静态文件访问的配置 -->
+	<mvc:resources location="/js/" mapping="/js/**"/>
+	<mvc:resources location="/css/" mapping="/css/**"/>
+	<mvc:resources location="/img/" mapping="/img/**"/>
+	
+</beans>
